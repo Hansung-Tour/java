@@ -1,0 +1,87 @@
+1. Object 클래스란?
+-단순하게 모든클래스(API 또는 내가 만든 class 등)는 Object클래스의 자식클래스이다.
+즉, Object클래스가 자바에서 '최상의 클래스'이다.
+
+2. 아래의 소스코드에 대하여 아래와 같이 출력되는 이유는?
+출력
+A@28a418fc
+==============
+class A{
+}
+
+public class Test {
+	public static void main(String[] args) {
+		A a = new A();
+		System.out.println(a); // String s = String.valueOf(x); -> s가 주소 뿌림
+	}
+}
+3. class이름 및 함수에서 final의 의미는?
+-상속불가 또는 변할 수없는 상수 선언
+'마지막 값'이 되도록 만들어 준다.
+값을 초기화만 할 수 있고, 그 값의 변경 및 새로운 할당이 불가능 한 상수가 된다.
+
+4.아래의 Main돌아 가도록 프로그래밍 하시오.
+
+interface Printable { // MS가 정의하고 제공한 인터페이스
+	public void print(String doc);
+}
+
+	//SPrinterDriver 와 LPrinterDriver를 만드시오
+	public static void main(String[] args) {
+		String myDoc = "This is a report about...";
+
+		// 삼성 프린터로 출력
+		Printable prn = new SPrinterDriver();
+		prn.print(myDoc);
+		System.out.println();
+
+		// LG 프린터로 출력
+		prn = new LPrinterDriver();
+		prn.print(myDoc);
+	}
+
+/*
+출력: 
+From Samsung printer
+This is a report about ...
+From LG printer
+This is a report about ...
+*/
+
+5. @Override 에 대하여 설명하시오.
+-상속의 관계에 있는 클래스 간의 하위 클래스가
+상위 클래스와 '완전 동일한 메소드'를 덮어쓴다.
+
+6. interface 에 대하여 설명해 보시오.
+-
+
+7.interface 안에 올 수 있는 것은 두가지를 말해 보시오?
+8. abstract 키워드란?
+9.아래의 결과가 나오도록 프로그래밍 하시오.
+Object obj = new Circle(10);
+System.out.println(obj);
+
+//출력: 넓이는 314.134 입니다. (예시)
+10. 아래의 프로그래밍을 하시오.
+
+아래의 인터페이스에 맞추어(상속하여) 아래를 프로그래밍 하시오.
+
+Circle, Rectangle , Triangle
+
+
+interface AreaGetable{
+double getArea();
+}
+
+
+main(){
+
+AreaGetable area = new Circle(4);
+sysout(area.getArea())
+
+area = new Rectangle(4,5);
+sysout(area.getArea())
+
+area = new Triangle(4,5);
+sysout(area.getArea())
+}
